@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your T-Shirt - T-STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="customize.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">T-STORE</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.php">Products</a></li>
+            <li><a href="customize.html" class="active">Customize</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class='bx bx-shopping-bag'></i></a></li>
+            <li><a href="login.html" id="login-link">Login</a></li>
+            <li><a href="profile.php" id="profile-link" style="display: none;">Profile</a></li>
+            <li><a href="../backend/logout.php" id="logout-link" style="display: none;">Logout</a></li>
+        </ul>
+    </header>
+
+    <!-- Customize Section -->
+    <section class="customize-hero">
+        <div class="customize-hero-content">
+            <h1>Design Your Perfect T-Shirt</h1>
+            <p>Create a unique T-shirt that expresses your style. Choose colors, add text, and make it truly yours!</p>
+        </div>
+    </section>
+
+    <!-- T-Shirt Designer -->
+    <section class="designer-section">
+        <div class="designer-container">
+            <!-- Preview Area -->
+            <div class="preview-area">
+                <h3>Your Design Preview</h3>
+                <div class="tshirt-preview" id="tshirt-preview">
+                    <div class="tshirt-base" id="tshirt-base">
+                        <div class="tshirt-text" id="tshirt-text"></div>
+                        <div class="tshirt-design" id="tshirt-design"></div>
+                    </div>
+                </div>
+                <div class="preview-controls">
+                    <button class="btn" onclick="resetDesign()">Reset Design</button>
+                    <button class="btn primary" id="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Design Controls -->
+            <div class="design-controls">
+                <h3>Customization Options</h3>
+                
+                <!-- T-Shirt Color -->
+                <div class="control-group">
+                    <label>T-Shirt Color:</label>
+                    <div class="color-options">
+                        <div class="color-option" data-color="#ffffff" style="background-color: #ffffff;" onclick="changeTshirtColor('#ffffff')"></div>
+                        <div class="color-option" data-color="#000000" style="background-color: #000000;" onclick="changeTshirtColor('#000000')"></div>
+                        <div class="color-option" data-color="#ff6b6b" style="background-color: #ff6b6b;" onclick="changeTshirtColor('#ff6b6b')"></div>
+                        <div class="color-option" data-color="#4ecdc4" style="background-color: #4ecdc4;" onclick="changeTshirtColor('#4ecdc4')"></div>
+                        <div class="color-option" data-color="#45b7d1" style="background-color: #45b7d1;" onclick="changeTshirtColor('#45b7d1')"></div>
+                        <div class="color-option" data-color="#96ceb4" style="background-color: #96ceb4;" onclick="changeTshirtColor('#96ceb4')"></div>
+                        <div class="color-option" data-color="#feca57" style="background-color: #feca57;" onclick="changeTshirtColor('#feca57')"></div>
+                        <div class="color-option" data-color="#ff9ff3" style="background-color: #ff9ff3;" onclick="changeTshirtColor('#ff9ff3')"></div>
+                    </div>
+                </div>
+
+                <!-- Text Customization -->
+                <div class="control-group">
+                    <label>Add Custom Text:</label>
+                    <input type="text" id="custom-text" placeholder="Enter your text here..." maxlength="20">
+                    <div class="text-controls">
+                        <label>Text Color:</label>
+                        <input type="color" id="text-color" value="#000000">
+                        <label>Font Size:</label>
+                        <select id="font-size">
+                            <option value="16">Small</option>
+                            <option value="20" selected>Medium</option>
+                            <option value="24">Large</option>
+                            <option value="28">Extra Large</option>
+                        </select>
+                    </div>
+                    <button class="btn small" onclick="addText()">Add Text</button>
+                </div>
+
+                <!-- Design Templates -->
+                <div class="control-group">
+                    <label>Design Templates:</label>
+                    <div class="design-templates">
+                        <div class="design-template" onclick="addDesign('heart')">
+                            <span style="color: #ff6b6b; font-size: 24px;">❤️</span>
+                            <span>Heart</span>
+                        </div>
+                        <div class="design-template" onclick="addDesign('star')">
+                            <span style="color: #feca57; font-size: 24px;">⭐</span>
+                            <span>Star</span>
+                        </div>
+                        <div class="design-template" onclick="addDesign('smile')">
+                            <span style="color: #feca57; font-size: 24px;">😊</span>
+                            <span>Smile</span>
+                        </div>
+                        <div class="design-template" onclick="addDesign('peace')">
+                            <span style="color: #4ecdc4; font-size: 24px;">✌️</span>
+                            <span>Peace</span>
+                        </div>
+                        <div class="design-template" onclick="addDesign('music')">
+                            <span style="color: #ff9ff3; font-size: 24px;">🎵</span>
+                            <span>Music</span>
+                        </div>
+                        <div class="design-template" onclick="addDesign('clear')">
+                            <span style="color: #ff6b6b; font-size: 24px;">🗑️</span>
+                            <span>Clear</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="control-group">
+                    <label>T-Shirt Size:</label>
+                    <div class="size-options">
+                        <label class="size-option">
+                            <input type="radio" name="size" value="S" checked>
+                            <span>S</span>
+                        </label>
+                        <label class="size-option">
+                            <input type="radio" name="size" value="M">
+                            <span>M</span>
+                        </label>
+                        <label class="size-option">
+                            <input type="radio" name="size" value="L">
+                            <span>L</span>
+                        </label>
+                        <label class="size-option">
+                            <input type="radio" name="size" value="XL">
+                            <span>XL</span>
+                        </label>
+                        <label class="size-option">
+                            <input type="radio" name="size" value="XXL">
+                            <span>XXL</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Quantity -->
+                <div class="control-group">
+                    <label>Quantity:</label>
+                    <div class="quantity-control">
+                        <button onclick="changeQuantity(-1)">-</button>
+                        <input type="number" id="quantity" value="1" min="1" max="10">
+                        <button onclick="changeQuantity(1)">+</button>
+                    </div>
+                </div>
+
+                <!-- Price Display -->
+                <div class="price-display">
+                    <h4>Custom T-Shirt Price:</h4>
+                    <div class="price">LKR <span id="custom-price">2500</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How Customization Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h3>Design</h3>
+                    <p>Choose your T-shirt color, add custom text, and select from our design templates.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h3>Preview</h3>
+                    <p>See your design in real-time as you customize. Make adjustments until it's perfect.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h3>Order</h3>
+                    <p>Add to cart and complete your purchase. We'll create your custom T-shirt just for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="customize.js"></script>
+</body>
+</html> 

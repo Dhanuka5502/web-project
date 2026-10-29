@@ -1,0 +1,476 @@
+/* Simple & Consistent Purple/White/Yellow Styles for Customize Page */
+
+/* Hero Section */
+.customize-hero {
+    background-color: #673ab7;
+    color: #ffffff;
+    padding: 80px 20px 40px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.customize-hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.customize-hero-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+    font-family: Arial, sans-serif;
+}
+
+/* Designer Section */
+.designer-section {
+    padding: 40px 0;
+    background: #f8f6fc;
+}
+
+.designer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Preview Area */
+.preview-area {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.preview-area h3 {
+    margin-bottom: 25px;
+    color: #673ab7;
+    font-size: 1.4rem;
+}
+
+.tshirt-preview {
+    width: 300px;
+    height: 350px;
+    margin: 0 auto 25px;
+    position: relative;
+    background: #fdfcff;
+    border: 1px dashed #cccccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tshirt-base {
+    width: 200px;
+    height: 250px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tshirt-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 150px;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+
+.tshirt-design {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+
+.preview-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.preview-controls .btn {
+    padding: 10px 20px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    color: #333333;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.preview-controls .btn.primary {
+    background-color: #ffd700;
+    color: #000000;
+    border: 1px solid #d4af37;
+}
+
+.preview-controls .btn:hover {
+    background-color: #e0e0e0;
+}
+
+.preview-controls .btn.primary:hover {
+    background-color: #e0a800;
+}
+
+/* Design Controls */
+.design-controls {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.design-controls h3 {
+    margin-bottom: 25px;
+    color: #673ab7;
+    font-size: 1.4rem;
+}
+
+.control-group {
+    margin-bottom: 25px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555555;
+}
+
+/* Color Options */
+.color-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.color-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #cccccc;
+    position: relative;
+}
+
+.color-option:hover {
+    border-color: #673ab7;
+}
+
+.color-option.active {
+    border-color: #673ab7;
+    box-shadow: 0 0 0 2px rgba(103, 58, 183, 0.3);
+}
+
+/* Text Controls */
+#custom-text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+#custom-text:focus {
+    outline: none;
+    border-color: #673ab7;
+}
+
+.text-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.text-controls label {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.text-controls input,
+.text-controls select {
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.text-controls input[type="color"] {
+    padding: 2px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.btn.small {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #ffd700;
+    color: #000000;
+    border: 1px solid #d4af37;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn.small:hover {
+    background-color: #e0a800;
+}
+
+/* Design Templates */
+.design-templates {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.design-template {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    background: #ffffff;
+}
+
+.design-template:hover {
+    border-color: #673ab7;
+    background-color: #fbf9ff;
+}
+
+.design-template span {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.design-template span:last-child {
+    font-size: 12px;
+    color: #666666;
+}
+
+/* Size Options */
+.size-options {
+    display: flex;
+    gap: 10px;
+}
+
+.size-option {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.size-option input[type="radio"] {
+    display: none;
+}
+
+.size-option span {
+    display: block;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #555555;
+    background: #ffffff;
+}
+
+.size-option input[type="radio"]:checked + span {
+    border-color: #673ab7;
+    background: #673ab7;
+    color: #ffffff;
+}
+
+/* Quantity Control */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 150px;
+}
+
+.quantity-control button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.quantity-control button:hover {
+    background-color: #f1f1f1;
+}
+
+.quantity-control input {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Price Display */
+.price-display {
+    background-color: #f3effa;
+    border: 1px solid #dddddd;
+    color: #673ab7;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.price-display h4 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #555555;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 60px 0;
+    background: #ffffff;
+    border-top: 1px solid #dddddd;
+}
+
+.how-it-works .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #673ab7;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.step {
+    padding: 25px;
+    background: #f8f6fc;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #673ab7;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+.step h3 {
+    margin-bottom: 12px;
+    color: #673ab7;
+    font-size: 1.2rem;
+}
+
+.step p {
+    color: #666666;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .designer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .customize-hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .tshirt-preview {
+        width: 250px;
+        height: 300px;
+    }
+    
+    .tshirt-base {
+        width: 150px;
+        height: 200px;
+    }
+    
+    .color-options {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .design-templates {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .text-controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .customize-hero {
+        padding: 60px 0 30px;
+    }
+    
+    .customize-hero-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .preview-controls {
+        flex-direction: column;
+    }
+    
+    .size-options {
+        flex-wrap: wrap;
+    }
+    
+    .size-option {
+        flex: 0 0 calc(50% - 5px);
+    }
+}

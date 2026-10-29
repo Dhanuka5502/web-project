@@ -1,0 +1,335 @@
+/* Simple Purple & White Theme Styles for Homepage */
+
+:root {
+    --bg-purple: #f3effa;
+    --primary-purple: #673ab7;
+    --btn-yellow: #ffd700;
+    --btn-yellow-hover: #e0a800;
+    --text-dark: #333333;
+    --border-color: #dddddd;
+}
+
+body {
+    background-color: var(--bg-purple) !important;
+    color: var(--text-dark) !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    display: block !important;
+    align-items: initial !important;
+}
+
+/* Header Navbar */
+header {
+    background-color: var(--primary-purple) !important;
+    border-bottom: 2px solid #512da8 !important;
+    padding: 15px 50px !important;
+}
+
+header.scrolled {
+    background-color: #512da8 !important;
+    padding: 15px 50px !important;
+}
+
+.navbar a {
+    color: #ffffff !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    text-transform: none !important;
+    border-radius: 4px !important;
+    padding: 8px 15px !important;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.header-icon .bx {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.header-icon i:hover {
+    color: var(--btn-yellow) !important;
+}
+
+/* Hero Section */
+.home {
+    background: var(--bg-purple) !important;
+    padding: 100px 50px 50px !important;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+}
+
+.home-text h1 {
+    font-size: 2.8rem !important;
+    font-weight: bold !important;
+    color: var(--primary-purple) !important;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    margin-bottom: 15px;
+}
+
+.home-text p {
+    color: #555555 !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
+    max-width: 450px;
+}
+
+/* Button Simplification */
+.btn {
+    display: inline-block;
+    padding: 10px 20px !important;
+    border-radius: 4px !important;
+    background-color: var(--btn-yellow) !important;
+    color: #000000 !important;
+    font-weight: bold !important;
+    border: 1px solid #d4af37 !important;
+    box-shadow: none !important;
+    text-transform: none !important;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease !important;
+}
+
+.btn:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    background-color: var(--btn-yellow-hover) !important;
+}
+
+.home-img {
+    animation: none !important; /* Remove floating animation */
+}
+
+.home-img img {
+    max-width: 350px !important;
+    height: auto !important;
+}
+
+/* Slideshow Container */
+.slideshow-section {
+    padding: 40px 50px !important;
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.slideshow-section h2 {
+    color: var(--primary-purple);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.slideshow-container {
+    max-width: 600px;
+    height: 350px !important;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: none !important;
+}
+
+/* Customize Section */
+.customize {
+    background-color: var(--bg-purple) !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2rem !important;
+    align-items: center !important;
+    padding: 50px 50px !important;
+}
+
+.customize-img img {
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    border: 1px solid var(--border-color) !important;
+    max-width: 100%;
+}
+
+.customize-text h2 {
+    font-size: 2.2rem !important;
+    font-weight: bold !important;
+    color: var(--primary-purple) !important;
+    margin-bottom: 15px;
+}
+
+.customize-text p {
+    color: #555555 !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Products Section */
+.products {
+    background-color: #ffffff !important;
+    padding: 50px 50px !important;
+    border-top: 1px solid var(--border-color);
+}
+
+.products .heading h2 {
+    font-size: 2.2rem !important;
+    font-weight: bold !important;
+    color: var(--primary-purple) !important;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.products .heading h2::after {
+    display: none; /* Remove accent line under heading */
+}
+
+.product-container .box {
+    background-color: #ffffff !important;
+    border: 1px solid var(--border-color) !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
+    transition: none !important;
+}
+
+.product-container .box:hover {
+    transform: none !important;
+    border-color: #bbbbbb !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+}
+
+.product-container img {
+    background-color: #fcfcfc !important;
+    border: 1px solid #eeeeee;
+    border-radius: 6px !important;
+    height: 220px !important;
+    padding: 10px !important;
+}
+
+.product-container .box h3 {
+    color: var(--text-dark) !important;
+    font-size: 1.05rem !important;
+    margin-top: 10px !important;
+    margin-bottom: 8px !important;
+}
+
+.product-container .box .content span {
+    background-color: #f1f0f5 !important;
+    color: var(--primary-purple) !important;
+    border: 1px solid #ddd;
+    padding: 4px 10px !important;
+    border-radius: 4px !important;
+    font-size: 0.9rem !important;
+    font-weight: bold !important;
+}
+
+/* Testimonials / Customers Section */
+.customers {
+    background-color: var(--bg-purple) !important;
+    padding: 50px 50px !important;
+    border-top: 1px solid var(--border-color);
+}
+
+.customers .heading h2 {
+    font-size: 2.2rem !important;
+    font-weight: bold !important;
+    color: var(--primary-purple) !important;
+    margin-bottom: 30px;
+}
+
+.customers-container .box {
+    background-color: #ffffff !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
+    transition: none !important;
+}
+
+.customers-container .box:hover {
+    background-color: #ffffff !important;
+    border-color: #bbbbbb !important;
+    transform: none !important;
+}
+
+.stars .bx {
+    color: #ffc107 !important; /* Standard yellow gold for stars */
+}
+
+.customers-container .box p {
+    color: #555555 !important;
+    font-style: normal !important;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.customers-container .box h2 {
+    color: var(--text-dark) !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+
+.customers-container .box img {
+    border: 1px solid var(--border-color);
+}
+
+/* Footer */
+.footer {
+    background-color: #1a0f30 !important;
+    padding: 50px 50px 30px !important;
+}
+
+.footer-box h3 {
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+.footer-box p {
+    color: #cccccc !important;
+    font-size: 0.9rem;
+}
+
+.footer-box li a {
+    color: #bbbbbb !important;
+}
+
+.footer-box li a:hover {
+    color: var(--btn-yellow) !important;
+}
+
+.social a .bx {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.social a .bx:hover {
+    background-color: var(--btn-yellow) !important;
+    color: #000000 !important;
+}
+
+/* Responsiveness overrides */
+@media screen and (max-width: 992px) {
+    section {
+        padding: 40px 20px !important;
+    }
+    .home {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding-top: 100px !important;
+    }
+    .home-text h1 {
+        font-size: 2.2rem !important;
+    }
+    .home-img img {
+        max-width: 280px !important;
+    }
+    .customize {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+    }
+    .footer {
+        padding: 40px 20px !important;
+    }
+}
